@@ -1,0 +1,57 @@
+{% extends "generator_base.html" %}
+{% block content %}
+  <div class="container column is-10">
+    <div class="section">
+        <form action="" method="post" role="form">
+            {{ form.csrf }}
+
+<div class="form-group">
+        <div class="field">
+            <label class="label">Text</label>
+            <input class="form-input" id="text" name="text" type="text" placeholder="e.g. your name">
+        </div>
+        <label class="label">Height</label>
+        <div class="field has-addons">
+            <div class="control">
+            <input class="input" id="height" name="height" placeholder="Height">
+                </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+        <label class="label">Width</label>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" id="width" name="width" placeholder="Width">
+            </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+        <label class="label">Depth</label>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" id="depth" name="depth" placeholder="Depth">
+            </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+
+
+        <div class="control">
+            <button type="submit" class="button is-primary">Generate</button>
+        </div>
+
+    </div>
+            </form>
+  </div>
+    </div>
+
+{% endblock %}

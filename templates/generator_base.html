@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laser File Generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  </head>
+  <body>
+  <div id="app">
+<div class="column  nav-home">
+    <nav class="navbar has-shadow is-light" aria-label="main navigation">
+        <div class="navbar-brand">
+            <button class="button navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a {% if '/gen/' in request.path %}class="navbar-item is-active" {% else %}class="navbar-item"{% endif %} href="{{ url_for('phonecase')}}">File Generator</a>
+            </div>
+        </div>
+        <div class="navbar-menu is-hidden-desktop" id="navMenu">
+            <span><a  {% if '/gen/' in request.path %}class="navbar-item is-active" {% else %}class="navbar-item"{% endif %} href="{{ url_for('phonecase')}}">File Generator</a></span>
+        </div>
+    </nav>
+</div>
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-right nav-menu">
+      <a id="phonecase" href="{{ url_for('phonecase')}}" class="nav-item is-tab is-hidden-tablet">
+         Phonecase
+      </a>
+      <a id="wallet" href="{{ url_for('wallet')}}" class="nav-item is-tab is-hidden-tablet">
+        Wallet
+      </a>
+      <a id="watchstrap" href="{{ url_for('watchstrap')}}" class="nav-item is-tab is-hidden-tablet">
+        Watchstrap
+      </a>
+        <a id="pencilcase" href="{{ url_for('pencilcase')}}" class="nav-item is-tab is-hidden-tablet">
+        Pencilcas
+      </a>
+        <a id="glassescover" href="{{ url_for('glassescover')}}" class="nav-item is-tab is-hidden-tablet">
+        Glasses Cover
+      </a>
+    </div>
+  </div>
+</nav>
+
+<section class="main-content columns is-fullheight">
+  <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
+    <ul class="menu-list">
+      <li>
+        <a id="phonecase" href="{{ url_for('phonecase')}}" {% if url_for('phonecase') in request.path %}class="is-active"{% endif %}>
+          Phonecase
+        </a>
+      </li>
+      <li>
+        <a id="wallet" href="{{ url_for('wallet')}}" {% if url_for('wallet') in request.path %}class="is-active"{% endif %}>
+          Wallet
+        </a>
+      </li>
+      <li>
+        <a id="watchstrap" href="{{ url_for('watchstrap')}}" {% if url_for('watchstrap') in request.path %}class="is-active"{% endif %}>
+          Watchstrap
+        </a>
+      </li>
+              <li>
+        <a id="pencilcase" href="{{ url_for('pencilcase')}}" {% if url_for('pencilcase') in request.path %}class="is-active"{% endif %}>
+          Pencilcase
+        </a>
+      </li>
+          <li>
+        <a id="glassescover" href="{{ url_for('glassescover')}}" {% if url_for('glassescover') in request.path %}class="is-active"{% endif %}>
+          Glasses Cover
+        </a>
+      </li>
+    </ul>
+  </aside>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    {% block content %}{% endblock %}
+
+
+
+</section></div>
+</body>
+</html>

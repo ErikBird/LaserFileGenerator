@@ -1,0 +1,33 @@
+{% extends "generator_base.html" %}
+{% block content %}
+  <div class="container column is-10">
+    <div class="section">
+        <form action="" method="post" role="form">
+
+
+<div class="form-group">
+        <div class="field">
+            <label class="label">Text</label>
+            <input class="form-input" id="text" name="text" type="text" placeholder="e.g. your name">
+        </div>
+        <label class="label">Version</label>
+        <div class="field has-addons">
+            <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="version" name="version">
+                    <option value=1>One</option>
+                      <option value=2>Two</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+        <div class="control">
+            <button type="submit" class="button is-primary">Generate</button>
+        </div>
+
+    </div>
+            </form>
+  </div>
+    </div>
+
+{% endblock %}

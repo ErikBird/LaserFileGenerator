@@ -1,0 +1,10 @@
+pytz
+flask
+ezdxf
+flask-cors
+Flask-WTF
+flask-sqlalchemy
+flask-migrate
+pymysql
+cryptography
+moviepy

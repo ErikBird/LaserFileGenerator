@@ -1,0 +1,78 @@
+{% extends "generator_base.html" %}
+{% block content %}
+  <div class="container column is-10">
+    <div class="section">
+        <form action="" method="post" role="form">
+
+
+<div class="form-group">
+        <div class="field">
+            <label class="label">Text</label>
+            <input class="form-input" id="text" name="text" type="text" placeholder="e.g. your name">
+        </div>
+        <label class="label">Width at the Watch</label>
+        <div class="field has-addons">
+            <div class="control">
+            <input class="input" id="top" name="top" placeholder="20">
+                </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+        <label class="label">Width at the Buckle</label>
+        <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" id="buckle" name="buckle" placeholder="18">
+            </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+    <label class="label">Buckle Nail Width</label>
+    <div class="field has-addons">
+            <div class="control">
+                <input class="input" type="text" id="nail" name="nail" placeholder="3">
+            </div>
+            <p class="control">
+                <a class="button is-static">
+                        mm
+                </a>
+            </p>
+        </div>
+        <label class="label">Length</label>
+        <div class="field has-addons">
+            <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="length" name="length">
+                    <option value="65">Small</option>
+                    <option value="72.5">Medium</option>
+                    <option value="80">Large</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+    <label class="label">Version</label>
+        <div class="field has-addons">
+            <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="version" name="version">
+                    <option value=2>integrated</option>
+                    <option value=1>extra</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+        <div class="control">
+            <button type="submit" class="button is-primary">Generate</button>
+        </div>
+
+    </div>
+            </form>
+  </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/code
+    restart: always
+    environment:
+      ENV: DEVELOPMENT
+    links:
+      - cache:cache
+
+  cache:
+      image: memcached
+      ports:
+        - "11211:11211"
